@@ -3,7 +3,6 @@ package container
 import (
 	"go.mongodb.org/mongo-driver/bson"
 	"log"
-	"strconv"
 	"strings"
 )
 
@@ -50,12 +49,4 @@ func ConvertToDto(input *bson.Raw) FIDataSourceDto {
 		log.Fatal("Unable to get the elements from bson.Raw")
 	}
 	return result
-}
-
-func convert(b []byte) string {
-	s := make([]string, len(b))
-	for i := range b {
-		s[i] = strconv.Itoa(int(b[i]))
-	}
-	return strings.Join(s, ",")
 }
