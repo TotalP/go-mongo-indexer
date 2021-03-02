@@ -8,6 +8,7 @@ type FDPropertyContainer struct {
 
 type FIDataSourceDto struct {
 	Id                      string
+	Class                   string
 	IFileMobId              string
 	ISourceMobId            string
 	IMasterMobId            string

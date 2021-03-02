@@ -17,7 +17,7 @@ func ConvertToDto(input *bson.Raw) FIDataSourceDto {
 			case "_id":
 				result.Id = value.String()
 			case "_class":
-				continue
+				result.Class = value.String()
 			case "iFileMobId":
 				result.IFileMobId = value.String()
 			case "iSourceMobId":
